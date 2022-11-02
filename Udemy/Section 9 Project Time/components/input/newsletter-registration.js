@@ -11,7 +11,7 @@ function NewsletterRegistration() {
 
     const reqBody = { email: enteredEmail };
 
-    fetch(`/api/newsletter`, {
+    fetch("/api/newsletter", {
       method: "POST",
       body: JSON.stringify(reqBody),
       headers: {
@@ -20,10 +20,6 @@ function NewsletterRegistration() {
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
-
-    // fetch user input (state or refs)
-    // optional: validate input
-    // send valid data to API
   }
 
   return (
